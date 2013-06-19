@@ -1,3 +1,8 @@
 *.swp
 *.pyc
 project_euler
+code_jam
+top_coder
+*.o
+bin
+lib
