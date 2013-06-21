@@ -1,6 +1,6 @@
 #include "algorithms/binary_search.h"
 
-bool binary_search(int find, int list[], int start, int length)
+bool binary_search(const int find, const int list[], int start, int length)
 {
     int mid = (length / 2) + start;
     if (length == 1) {

@@ -1,1 +1,1 @@
-bool binary_search(int find, int list[], int start, int length);
+bool binary_search(const int find, const int list[], int start, int length);
