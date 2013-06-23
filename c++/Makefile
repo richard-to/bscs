@@ -1,6 +1,8 @@
 LIB=-L/usr/local/lib -Llib
 INC=-I/usr/local/include -Iinclude
 
+all: binary_search_test insertion_sort_test stack_test queue_test gcd_test fib_test
+
 binary_search_test: binary_search.o
 	g++ ${LIB} ${INC} test/algorithms/binary_search.cpp -lbinary_search.o -lgtest -lgtest_main -o bin/binary_search_test
 
@@ -24,6 +26,18 @@ queue_test: queue.o
 
 queue.o:
 	g++ -c ${INC} src/data_structures/queue.cpp -o lib/queue.o
+
+gcd_test: gcd.o
+	g++ ${LIB} ${INC} test/algorithms/gcd.cpp -lgcd.o -lgtest -lgtest_main -o bin/gcd_test
+
+gcd.o:
+	g++ -c ${INC} src/algorithms/gcd.cpp -o lib/gcd.o
+
+fib_test: fib.o
+	g++ ${LIB} ${INC} test/algorithms/fib.cpp -lfib.o -lgtest -lgtest_main -o bin/fib_test
+
+fib.o:
+	g++ -c ${INC} src/algorithms/fib.cpp -o lib/fib.o
 
 clean:
 	rm -rf bin/*

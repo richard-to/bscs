@@ -45,7 +45,7 @@ void Queue::enqueue(int value)
 int Queue::dequeue()
 {
     if (head_ == 0) {
-        throw "Cannot dequeue on empty stack";
+        throw "Cannot dequeue on empty queue!";
     } else {
         QueueNode* temp = head_;
         int value = head_->value_;
