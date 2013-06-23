@@ -19,6 +19,12 @@ stack_test: stack.o
 stack.o:
 	g++ -c ${INC} src/data_structures/stack.cpp -o lib/stack.o
 
+queue_test: queue.o
+	g++ ${LIB} ${INC} test/data_structures/queue.cpp -lqueue.o -lgtest -lgtest_main -o bin/queue_test
+
+queue.o:
+	g++ -c ${INC} src/data_structures/queue.cpp -o lib/queue.o
+
 clean:
 	rm -rf bin/*
 	rm -rf lib/*
